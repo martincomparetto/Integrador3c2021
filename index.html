@@ -14,11 +14,66 @@
 
 <body class="text-center">
 
-    <label for="">Radio</label>
-    <input type="number" name="" id="textRadio">
-    <button onclick="calcularSuperficie()">Calcular las superficies</button>
-    <br>
-    <input type="text" id="textResultado" disabled class="fullPantalla">
+    <div class="container">
+        <label for="">Radio</label>
+        <input type="number" name="" id="textRadio">
+        <button onclick="calcularSuperficie()">Calcular las superficies</button>
+        <br>
+        <input type="text" id="textResultado" disabled class="fullPantalla">
+    </div>
+
+    <div class="container" id="espacioSaludos">
+        <label for="">Nombre</label>
+        <input type="text" name="" id="nombre">
+        <label for="">Apellido</label>
+        <input type="text" name="" id="apellido">
+        <button onclick="Saludar()">Saludar</button>
+        <button onclick="SaludarWHILE()">Saludar con WHILE</button>
+        <button onclick="CrearObjetoLiteral()">Crear Objeto Literal</button>
+        <br>
+        <!-- <input type="text" id="saludo" readonly> -->
+    </div>
+
+    <div class="container">
+        <input type="text" name="" id="numero1">
+        <select name="" id="operacion">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">x</option>
+            <option value="/">/</option>
+        </select>
+        <input type="text" name="" id="numero2">
+        <button onclick="Calcular()">Resultado</button>
+        <input type="text" id="resultado" readonly>
+    </div>
+
+    <div class="container">
+        <input type="text" name="" id="cantidad">
+        <button onclick="ContarFOR()">Contar con FOR</button>
+        <button onclick="ContarWHILE()">Contar con WHILE</button>
+        <input type="text" id="resultadoConteo" readonly>
+        <div id="conteo"></div>
+    </div>
+ 
+    <div class="container">
+        <label for="">Nuevo Nombre</label>
+        <input type="text" name="" id="nombrePersona">
+        <button onclick="AgregarNombreArray()">Agregar Nombre</button>
+        <button onclick="MostrarArray()">Mostrar Nombres</button>
+        <div id="listaNombres"></div>
+    </div>
+
+    <div class="container">
+        <label for="">Nombre</label>
+        <input type="text" name="" id="nombrePersonaObj">
+        <label for="">Apellido</label>
+        <input type="text" name="" id="apellidoPersonaObj">
+        <label for="">Edad</label>
+        <input type="number" name="" id="edadPersonaObj">
+        <button onclick="AgregarPersona()">Agregar Persona</button>
+        <button onclick="MostrarPersonas()">Mostrar Personas</button>
+        <div id="listaNombresObj"></div>
+    </div>
 </body>
 
 </html>
