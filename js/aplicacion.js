@@ -193,7 +193,6 @@ const MostrarArray = () => {
     }
 }
 
-
 var arrayPersonas = [];
 
 const AgregarPersona = () => {
@@ -231,4 +230,21 @@ const MostrarPersonas = () => {
         item.innerHTML = `Nombre: ${arrayPersonas[index].nombre} Apellido: ${arrayPersonas[index].apellido} Edad: ${arrayPersonas[index].edad}`
         div.append(item);
     }
+}
+
+variables();
+
+function variables() {
+    let variable1 = "valor1";
+    console.log(variable1);
+
+    if (true) {
+        let variable1 = 0;
+        var variable2 = "pepe"
+        console.log(variable1);
+    }
+
+    console.log(variable1);
+    console.log(variable2);
+
 }
