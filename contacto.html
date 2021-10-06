@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.1.1-dist/css/bootstrap.min.css">
     <title>Contacto</title>
 </head>
+
 <body>
     <h1>Contacto</h1>
 
+    <div id="botones">
+        <button>0</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+    </div>
+    <button id="agregarBotones" onclick="agregarBotones()">Agregar Botones</button>
+    <button id="borrarBotones" onclick="borrarBotones()">Borrar Botones</button>
+
+    <div class="container">
+        Item: <input type="text" id="item"><br>
+        <button onclick="agregarItem()">Agregar</button><br>
+        <button onclick="eliminarItem()">Eliminar</button><br>
+
+        <select id="lista"></select>
+    </div>
+
+    <script src="bootstrap-5.1.1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/contactojq.js"></script>
 </body>
+
 </html>

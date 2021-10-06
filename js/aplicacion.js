@@ -246,5 +246,69 @@ function variables() {
 
     console.log(variable1);
     console.log(variable2);
-
 }
+
+// let arrayBebidas = ["Agua", "Soda", "Gaseosa", "Cerveza", "Vino"];
+// let arrayPreciosBebidas = [50, 60, 70, 150, 200];
+
+let arrayProductosBebidas = [
+    {
+        Producto: "Agua",
+        Precio: 50
+    },
+    {
+        Producto: "Soda",
+        Precio: 60
+    },
+    {
+        Producto: "Gaseosa",
+        Precio: 70
+    },
+    {
+        Producto: "Cerveza",
+        Precio: 150
+    },
+    {
+        Producto: "Vino",
+        Precio: 200
+    }
+];
+
+let arrayComidas = ["Pizza", "Hamburguesa", "Ensalada", "Milanesa", "Sopa"]
+let pedido = "";
+let cantidadProductos = 0;
+let importeTotal = 0;
+
+const AgregarMenuBebida = (item) => {
+    let cantidad = parseInt(document.getElementById("cantidadPedido").value);
+
+    console.log(arrayProductosBebidas[item]);
+    let bebida = arrayProductosBebidas[item].Producto;
+    pedido = pedido + `Se agrego ${cantidad} ${bebida} - `;
+    cantidadProductos = cantidadProductos + cantidad;
+    importeTotal = importeTotal + (arrayProductosBebidas[item].Precio * cantidad);
+
+    VisualizarDatos();
+}
+
+const AgregarMenuComida = (item) => {
+    let cantidad = parseInt(document.getElementById("cantidadPedido").value);
+    pedido = pedido + `Se agrego ${cantidad} ${arrayComidas[item]} - `;
+    cantidadProductos = cantidadProductos + cantidad;
+
+    VisualizarDatos();
+}
+
+const NuevoPedido = () => {
+    pedido = "";
+    cantidadProductos = 0;
+    importeTotal = 0;
+    VisualizarDatos();
+}
+
+const VisualizarDatos = () => {
+    document.getElementById("pedidoMesa").value = pedido;
+    document.getElementById("cantidadItemsPedidos").value = cantidadProductos;
+    document.getElementById("totalItemsPedidos").value = importeTotal;
+}
+

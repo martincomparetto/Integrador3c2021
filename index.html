@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="bootstrap-5.1.1-dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/aplicacion.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <title>App Contabilidad</title>
 </head>
 
@@ -73,6 +74,40 @@
         <button onclick="AgregarPersona()">Agregar Persona</button>
         <button onclick="MostrarPersonas()">Mostrar Personas</button>
         <div id="listaNombresObj"></div>
+    </div>
+    <br><br>
+    <div class="container">
+        <h1>Menu del Barcito</h1>
+        Cantidad: <input type="text" id="cantidadPedido">
+        <br>
+        <h2>Bebidas</h2>
+        <button onclick="AgregarMenuBebida(0)">Agua</button>
+        <button onclick="AgregarMenuBebida(1)">Soda</button>
+        <button onclick="AgregarMenuBebida(2)">Gaseosa</button>
+        <button onclick="AgregarMenuBebida(3)">Cerveza</button>
+        <button onclick="AgregarMenuBebida(4)">Vino</button>
+
+        <h2>Comida</h2>
+        <button onclick="AgregarMenuComida(0)">Pizza</button>
+        <button onclick="AgregarMenuComida(1)">Hamburguesa</button>
+        <button onclick="AgregarMenuComida(2)">Ensala</button>
+        <button onclick="AgregarMenuComida(3)">Milanesa</button>
+        <button onclick="AgregarMenuComida(4)">Sopa</button>
+
+        <h2>Postre</h2>
+        <button>Cafe</button>
+        <button>Ensalada de Fruta</button>
+        <button>Budin de Pan</button>
+        <button>Flan</button>
+        <button>Helado</button>
+
+        <h2>Pedido de la mesa</h2>
+        <textarea id="pedidoMesa" cols="50" rows="10"></textarea>
+        <br>
+        Cantidad Items<input type="text" id="cantidadItemsPedidos"><br>
+        Total<input type="text" id="totalItemsPedidos">
+        <br>
+        <button onclick="NuevoPedido()">Nuevo Pedido</button>
     </div>
 </body>
 
