@@ -286,7 +286,7 @@ const AgregarMenuBebida = (item) => {
     let bebida = arrayProductosBebidas[item].Producto;
     pedido = pedido + `Se agrego ${cantidad} ${bebida} - `;
     cantidadProductos = cantidadProductos + cantidad;
-    importeTotal = importeTotal + (arrayProductosBebidas[item].Precio * cantidad);
+    importeTotal = importeTotal + CalcularTotalItem(arrayProductosBebidas[item].Precio, cantidad);
 
     VisualizarDatos();
 }
@@ -310,5 +310,14 @@ const VisualizarDatos = () => {
     document.getElementById("pedidoMesa").value = pedido;
     document.getElementById("cantidadItemsPedidos").value = cantidadProductos;
     document.getElementById("totalItemsPedidos").value = importeTotal;
+}
+
+const CalcularTotalItem = (precio, cantidad) => {
+    let totalItem = precio * cantidad;
+    if (cantidad > 5)
+    {
+        totalItem = totalItem - (totalItem * 10 / 100);
+    }
+    return totalItem;
 }
 

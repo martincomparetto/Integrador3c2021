@@ -36,3 +36,15 @@ const eliminarItem = () => {
     $(`#lista > [value=${item}`).remove();
     $('#item').val("");
 }
+
+
+const suma = (numero1, numero2) => {
+    let suma = numero1 + numero2;
+    console.log("Dentro de la funcion: " + suma);
+    return suma;
+}
+
+let resultado = suma(10, 10);
+console.log("Fuera de la función: " + resultado);
+
+
