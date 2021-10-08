@@ -15,6 +15,14 @@ $(document).ready(function () {
 
 });
 
+const OcultarMostrarTitulo = () => {
+    if ($('h1').is(':hidden')) {
+        $('h1').show();
+    } else {
+        $('h1').hide();
+    }
+}
+
 const borrarBotones = () => {
     $('#botones').empty();
 }
@@ -47,4 +55,12 @@ const suma = (numero1, numero2) => {
 let resultado = suma(10, 10);
 console.log("Fuera de la función: " + resultado);
 
+let mensaje = "Hola";
+console.log(mensaje.length);
+console.log(mensaje.toLowerCase());
+console.log(mensaje.toUpperCase());
+console.log(mensaje.substring(2,4));
+
+let nombres = "Juan,Maria,Lucas,Ana";
+console.log(nombres.split(","));
 
