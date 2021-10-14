@@ -344,6 +344,7 @@ const CalcularTotalItem = (precio, cantidad) => {
 }
 
 let cadena = "";
+
 const Concatenar = () => {
     cadena = cadena + "a";
     $("#textoConcatenado").val(cadena);
@@ -352,4 +353,38 @@ const Concatenar = () => {
 const EliminarUltimo = () => {
     cadena = cadena.substring(0, cadena.length - 1);
     $("#textoConcatenado").val(cadena);
+}
+
+let piso = "";
+let depto = "";
+
+const ConcatenarNumero = (valor) => {
+    if (piso.length < 2) {
+        piso = piso + valor;
+    } else {
+        if (depto.length < 1) {
+            depto = depto + valor;
+        }
+    }
+
+    $("#viewPiso").val(piso);
+    $("#viewDepto").val(depto);
+}
+
+const Llamar = () => {
+    if (parseInt(piso) > 47) {
+        alert("Error en el piso");
+    }
+    if (parseInt(depto) > 8) {
+        alert("Error en el depto");
+    }
+    
+}
+
+const Borrar = () => {
+    piso = "";
+    depto = "";
+    
+    $("#viewPiso").val("");
+    $("#viewDepto").val("");
 }
