@@ -1,3 +1,22 @@
+$(document).ready(function() {
+    const divBotones = $("#botonesNumeros");
+
+    for (let index = 1; index <= 10; index++) {
+        // divBotones.append(`<button onclick="MostrarAlertaBoton(${index})">Boton ${index}</button>`)
+        divBotones.append(`<button>Boton ${index}</button>`)
+    }
+
+    $("#botonesNumeros > button").on("click", function() {
+        const textoBoton = $(this).html();
+        alert(`Se presionó el ${$(this).html()}`);
+        $(this).css("background-color", "blue");
+    });
+});
+
+const MostrarAlertaBoton = (numero) => {
+    alert("Se presionó el boton " + numero);
+}
+
 // console.log("Escribimos algo que nos interese mostrar en la consola");
 // console.log("Hola mundo!");
 
@@ -46,9 +65,12 @@ function Saludar() {
 }
 
 const Calcular = () => {
-    var valor1 = parseFloat(document.getElementById("numero1").value);
-    var operacion = document.getElementById("operacion").value;
-    var valor2 = parseFloat(document.getElementById("numero2").value);
+    // var valor1 = parseFloat(document.getElementById("numero1").value);
+    // var operacion = document.getElementById("operacion").value;
+    // var valor2 = parseFloat(document.getElementById("numero2").value);
+    var valor1 = parseFloat($("#numero1").val());
+    var operacion = $("#operacion").val();
+    var valor2 = parseFloat($("#numero2").val());
     var resultado;
 
     // console.log(typeof(valor1));
@@ -321,3 +343,13 @@ const CalcularTotalItem = (precio, cantidad) => {
     return totalItem;
 }
 
+let cadena = "";
+const Concatenar = () => {
+    cadena = cadena + "a";
+    $("#textoConcatenado").val(cadena);
+}
+
+const EliminarUltimo = () => {
+    cadena = cadena.substring(0, cadena.length - 1);
+    $("#textoConcatenado").val(cadena);
+}
